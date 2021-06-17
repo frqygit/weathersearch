@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 export default function Tempapp() {
     const [data, setData] = useState();
     const [city, setCity] = useState();
-    console.log(data);
+    
     useEffect(() => {
         const fetchApi = async () => {
             const url = `http://api.openweathermap.org/data/2.5/weather?q=${data}&units=metric&appid=82ec5df681d5c929b052853c7c6dac42`
