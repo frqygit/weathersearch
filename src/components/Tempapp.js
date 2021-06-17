@@ -10,7 +10,7 @@ export default function Tempapp() {
             const response = await fetch(url);
             const resJson = await response.json();
             console.log(resJson);
-            setCity(resJson.main)
+            setCity(resJson)
         }
 
         fetchApi();
@@ -28,11 +28,11 @@ export default function Tempapp() {
                         </h2>
 
                         <h3 className="temp">
-                            {city.temp} °C
+                            {city.main.temp} °C
                         </h3>
 
                         <h5 className="temp_min_max">
-                            Min {city.temp_min} °C      |    Max {city.temp_max} °C
+                            Min {city.main.temp_min} °C      |    Max {city.main.temp_max} °C
                         </h5>
 
                         <div className="wave -one"></div>
